@@ -1,0 +1,15 @@
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include small-pc {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

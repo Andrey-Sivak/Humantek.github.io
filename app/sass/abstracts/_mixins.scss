@@ -1,0 +1,26 @@
+@mixin font-face($path, $family, $type, $weight, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}#{$type}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin small-pc {
+  @media(max-width: $small-pc) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media(max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media(max-width: $mobile) {
+    @content;
+  }
+}

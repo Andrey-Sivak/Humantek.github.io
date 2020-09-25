@@ -1,0 +1,91 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 56.3%;
+  width: 100%;
+  margin-right: 25px;
+
+  @include tablet {
+    margin-right: 0;
+    max-width: 72%;
+  }
+
+  &_btn {
+    cursor: pointer;
+    width: 54px;
+    height: 10px;
+    background-image: url('../img/hide-menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    order: 2;
+
+    @include mobile {
+      position: relative;
+      z-index: 1000;
+    }
+  }
+
+  &.act &_btn {
+    width: 28px;
+    height: 24px;
+  }
+
+  &_wrap {
+    display: none;
+    justify-content: space-between;
+    max-width: 669px;
+    width: calc(100% - 142px);
+
+    @include tablet {
+      max-width: unset;
+      width: 90%;
+    }
+
+    @include mobile {
+      position: fixed;
+      flex-direction: column;
+      width: 100vw;
+      background-color: #000;
+      height: 100vh;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 100px 0;
+    }
+  }
+
+  &_item {
+    font-size: 19px;
+    line-height: 27.5px;
+    
+    &__link {
+      color: #fff;
+      font-family: $circe;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.act {
+    justify-content: space-between;
+
+    @include mobile {
+      justify-content: flex-end;
+    }
+  }
+
+  &.act &_wrap {
+    display: flex;
+  }
+
+  &.act &_btn {
+    background-image: url('../img/show-menu.svg');
+  }
+}

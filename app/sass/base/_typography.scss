@@ -1,0 +1,11 @@
+$dir: '../fonts';
+
+$aeroport: 'Aeroport';
+@include font-face('#{$dir}/#{$aeroport}', $aeroport, '-Light', 300);
+
+$bookAntiqua: 'BookAntiqua';
+$book-antiqua: 'Book Antiqua';
+@include font-face('#{$dir}/#{$bookAntiqua}', $bookAntiqua, '-Regular', 400);
+
+$circe: 'Circe';
+@include font-face('#{$dir}/#{$circe}', $circe, '-Light', 300);

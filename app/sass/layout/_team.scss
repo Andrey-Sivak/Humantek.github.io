@@ -1,0 +1,89 @@
+.team {
+  background-image: linear-gradient(rgba(26, 30, 40, 1), rgba(11, 14, 21, 1));
+  padding: 86px 0 120px;
+
+  @include mobile{
+    padding: 42px 0 0;
+  }
+
+  & .caption {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 46px;
+  }
+
+  &_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &_item {
+    width: 20%;
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      width: 33%;
+      margin-bottom: 25px;
+    }
+
+    @include mobile {
+      width: 50%;
+    }
+
+    &__img {
+      width: 100%;
+      display: block;
+
+      & img {
+        max-width: 100%;
+      }
+    }
+
+    &__name {
+      font-family: $book-antiqua;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 23px;
+      color: #fff;
+      margin-bottom: 8px;
+      margin-top: 18px;
+      padding-right: 35px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    &__position {
+      font-family: $aeroport;
+      font-size: 13px;
+      line-height: 23px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 1.2px;
+      color: rgba(255,255,255,.67);
+      padding-right: 35px;
+      font-weight: 300;
+
+      @include mobile {
+        line-height: 23px;
+        font-size: 11px;
+      }
+    }
+
+    &__text {
+      font-family: $aeroport;
+      color: rgba(255,255,255,.67);
+      font-size: 15px;
+      line-height: 143%;
+      padding-right: 35px;
+
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+  }
+}

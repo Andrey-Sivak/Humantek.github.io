@@ -1,0 +1,88 @@
+.first-screen {
+  background-image: url("../img/bg-1.svg"),
+                    url("../img/bg-2.svg"),
+                    linear-gradient(rgba(26, 30, 40, 1), rgba(11, 14, 21, 1));
+  background-repeat: no-repeat no-repeat;
+  background-position: top right, bottom left;
+  padding-top: 48px;
+  padding-bottom: 180px;
+  position: relative;
+
+  @include tablet {
+    padding-bottom: 2px;
+    background-size: contain;
+  }
+
+  @include mobile {
+    background-image: url("../img/bg-1.svg"),
+                      linear-gradient(rgba(26, 30, 40, 1), rgba(11, 14, 21, 1));
+  }
+
+  &_bg-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(26, 30, 40, 1), rgba(11, 14, 21, 1));
+    opacity: .5;
+    z-index: 1;
+  }
+
+  & .main-section {
+    margin-bottom: 150px;
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
+
+    &_caption {
+      font-family: $book-antiqua;
+      text-align: center;
+      color: #fff;
+      font-size: 90px;
+      line-height: 76px;
+      margin-bottom: 50px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+
+      @include tablet {
+        font-size: 56px;
+        line-height: 56px;
+      }
+
+      @include mobile {
+        font-size: 45px;
+        line-height: 39px;
+      }
+    }
+
+    &_subcaptions {
+      display: flex;
+      justify-content: center;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    &_subcaption {
+      max-width: 505px;
+      color: #fff;
+      font-family: $circe;
+      font-weight: 300;
+      opacity: .7;
+      font-size: 26px;
+      line-height: 37.5px;
+
+      @include mobile {
+        font-size: 19px;
+        line-height: 27px;
+      }
+    }
+  }
+}

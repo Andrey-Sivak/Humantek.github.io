@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 168px;
+  position: relative;
+  z-index: 3;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include mobile {
+    position: relative;
+  }
+
+  &_logo {
+    max-width: 210px;
+
+    @include tablet {
+      max-width: 150px;
+    }
+
+    @include mobile {
+      position: relative;
+      z-index: 1000;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+  }
+}
