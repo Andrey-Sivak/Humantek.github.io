@@ -542,7 +542,8 @@ a {
         font-family: "Circe";
         font-size: 18px;
         line-height: 143%;
-        font-weight: 300; }
+        font-weight: 300;
+        margin-bottom: 10px; }
       .group-list_list__item-site {
         padding-left: 25px;
         font-family: "Circe";
