@@ -39,9 +39,22 @@
     color: #fff;
   }
 
+  &_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
   &_form {
     max-width: 495px;
+    width: 100%;
     margin-top: 65px;
+    margin-right: 20px;
 
     &__main-email {
       margin-bottom: 22px;
@@ -89,6 +102,21 @@
       font-size: 17px;
       font-family: $circe;
       line-height: 24px;
+    }
+  }
+
+  &_img {
+    max-width: 100%;
+
+    &-wrap {
+      display: block;
+      width: 236px;
+      height: auto;
+      margin-bottom: 17px;
+
+      @include mobile {
+        margin-bottom: 0;
+      }
     }
   }
 }
