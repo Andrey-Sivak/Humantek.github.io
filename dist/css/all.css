@@ -690,6 +690,7 @@ a {
             -ms-flex-pack: space-evenly;
                 justify-content: space-evenly; }
       .group-list_content__block--img-list .group-list_content__block-item {
+        max-height: 50px;
         width: 22%;
         display: -webkit-box;
         display: -webkit-flex;
@@ -705,6 +706,8 @@ a {
                 align-items: center;
         margin-bottom: 15px; }
         .group-list_content__block--img-list .group-list_content__block-item img {
+          display: block;
+          max-height: 100%;
           max-width: 100%; }
       .group-list_content__block--text-list .group-list_content__block-item {
         padding-left: 25px;
