@@ -2,6 +2,7 @@
 import { showBlocks } from "./showBlocks";
 import { showSlides } from "./showSlides";
 import { menu } from "./menu";
+import { Slider } from "./slider";
 
 window.addEventListener('load', function () {
 
@@ -52,6 +53,12 @@ window.addEventListener('load', function () {
             }, 1000);
             $('.menu').removeClass('act');
         });
+    })();
+
+    (function () {
+        const sliderWrap = document.getElementById('slider');
+
+        Slider( sliderWrap );
     })();
 
 });
